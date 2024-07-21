@@ -1,4 +1,4 @@
-# **Nvidia GPU Architectures (2014-2024)**
+# Nvidia GPU Architectures (2014-2024)
 
 Here's an overview of Nvidia GPU architectures from the past 10 years, popular GPU cards for each architecture(Brown color for server version):
 
@@ -18,7 +18,8 @@ Here's an overview of Nvidia GPU architectures from the past 10 years, popular G
     - Popular GPUs: H100, H800, H20(mainly for China)
 8. **Blackwell(2023 - present, focused on data centers)**
     - Popular GPUs: GB200
-  # **Precision Formats Supported**
+
+# Precision Formats Supported
 
 Different precision formats offer a trade-off between computational accuracy and performance. They are represented in scientific notation in computers, consisting of three parts:
 
@@ -37,7 +38,7 @@ Please refer this wiki for how these parts convert number to binary format: http
 
 Here's an explanation of the various formats:
 
-1. FP64 (Double Precision)
+**1. FP64 (Double Precision)**
 - **Bits**: 64 (52-bit mantissa, 11-bit exponent, 1-bit sign)
 - **Use Cases**:
     - Scientific computing requiring high precision
@@ -45,7 +46,7 @@ Here's an explanation of the various formats:
     - Computational fluid dynamics
     - Financial modeling with high accuracy requirements
 - **Performance**: Slowest but highest precision
-2. FP32 (Single Precision)
+**2. FP32 (Single Precision)**
 - **Bits**: 32 (23-bit mantissa, 8-bit exponent, 1-bit sign)
 - **Use Cases**:
     - General-purpose computing
@@ -53,35 +54,35 @@ Here's an explanation of the various formats:
     - Computer graphics
     - Physics simulations
 - **Performance**: Balanced between precision and speed
-3. TF32 (Tensor Float 32)
+**3. TF32 (Tensor Float 32)**
 - **Bits**: 19 (10-bit mantissa, 8-bit exponent, 1-bit sign)
 - **Use Cases**:
     - AI model training (NVIDIA-specific format)
     - Offers a balance between FP32 accuracy and FP16 speed
     - First introduced with the **Ampere** architecture
 - **Performance**: Faster than FP32 with minimal accuracy loss for many AI tasks
-4. FP16 (Half Precision)
+**4. FP16 (Half Precision)**
 - **Bits**: 16(10-bit mantissa, 5-bit exponent, 1-bit sign)
 - **Use Cases**:
     - AI model training and inference
     - Computer vision
     - Image processing
 - **Performance**: Faster and more memory-efficient than FP32, with some accuracy trade-offs
-5. BF16 (Brain Float 16)
+**5. BF16 (Brain Float 16)**
 - **Bits**: 16 (7-bit mantissa, 8-bit exponent, 1-bit sign)
 - **Use Cases**:
     - AI model training, especially for **Large Language Models**
     - Offers better dynamic range than FP16
     - First introduced with the **Ampere** architecture
 - **Performance**: Good balance of speed and accuracy for many AI workloads
-6. INT8 (8-bit Integer)
+**6. INT8 (8-bit Integer)**
 - **Bits**: 8 (0-bit mantissa, 7-bit exponent, 1-bit sign)
 - **Use Cases**:
     - AI inference
     - Image processing
     - Low-precision neural network acceleration
 - **Performance**: High performance and low memory usage, suitable for deployment on edge devices
-7. FP8 (8-bit Floating Point)
+**7. FP8 (8-bit Floating Point)**
 - **Bits**: 8 (3-bit mantissa, 4-bit exponent, 1-bit sign)
 - **Use Cases**:
     - AI training and inference (emerging format)
@@ -90,7 +91,7 @@ Here's an explanation of the various formats:
 
 Illustration(image from nvidia-h100-tensor-core-hopper-whitepaper.pdf):
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f0690f3a-5cae-40ee-8511-4cfa3d154f0d/2e7f7d36-c99d-43fd-adb8-d6571a8baac2/Untitled.png)
+![precision format](https://github.com/huiqiao/huiqiao.github.io/blob/master/images/precision-format.jpg)
 
 Key Points:
 
@@ -108,7 +109,7 @@ Understanding these precision formats and their use cases is crucial for optimiz
 
 The fundamental computational units in Nvidia GPU is Streaming Multiprocessors(SM). GH100  full GPU has 144 SMs(image from nvidia-h100-tensor-core-hopper-whitepaper.pdf). 
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f0690f3a-5cae-40ee-8511-4cfa3d154f0d/cc102169-3844-4359-9716-e791bbc0484a/Untitled.png)
+![H100-SM Architecture](https://github.com/huiqiao/huiqiao.github.io/blob/master/images/H100-SM.jpg)
 
 Let’s talk about the major components of SM:
 
@@ -142,34 +143,34 @@ Let’s talk about the major components of SM:
     - Fastest on-chip memory(256 KB per SM for H100)
     - Organized into 32 banks (matching 32 threads in a warp)
     - Directly feeds into CUDA cores and Tensor cores
-    - **Latency**: Effectively 0 cycles (immediate access)
-    - **Bandwidth**: Highest on-chip bandwidth, up to 15 TB/s
+    - Latency: Effectively 0 cycles (immediate access)
+    - Bandwidth: Highest on-chip bandwidth, up to 15 TB/s
 2. **L1 Cache**:
     - On-chip storage for fast access to recently used data(Configurable up to  228 KB per SM for H100)
     - Serves as overflow for register spilling
-    - **Latency**: ~28-30 cycles
-    - **Bandwidth**: ~128 B/cycle per SM
+    - Latency: ~28-30 cycles
+    - Bandwidth: ~128 B/cycle per SM
 3. **Shared Memory**:
     - On-chip memory shared by threads in a block(shared with L1 cache)
     - Allows inter-thread communication
-    - **Latency**: ~20-30 cycles
-    - **Bandwidth**: Very high, up to 5 TB/s
-    - **Key diff** **with L1 cache**: managed by programmer, L1 cache is automatically managed by the hardware. Shared memory is limited to a thread block, while L1 cache serves all threads on the SM.
+    - Latency: ~20-30 cycles
+    - Bandwidth: Very high, up to 5 TB/s
+    - Key diff with L1 cache: managed by programmer, L1 cache is automatically managed by the hardware. Shared memory is limited to a thread block, while L1 cache serves all threads on the SM.
 4. **L2 Cache**:
     - Larger, shared cache between all SMs(50MB for H100)
     - Intermediary between on-chip and global memory
-    - **Latency**: ~193 cycles
-    - **Bandwidth**: ~17.6 B/cycle across all SMs
+    - Latency: ~193 cycles
+    - Bandwidth: ~17.6 B/cycle across all SMs
 5. **Global Memory(DRAM)**:
     - Main GPU memory (H100 uses HBM, 80GB)
     - Largest but slowest memory type
-    - **Latency**: 400-800 cycles
-    - **Bandwidth**: Lower than on-chip memory, but still high (e.g., 900 GB/s for A100)
+    - Latency: 400-800 cycles
+    - Bandwidth: Lower than on-chip memory, but still high (e.g., 900 GB/s for A100)
 6. **Constant and Texture Memory**:
     - Read-only memory areas
     - Cached for faster access
-    - **Latency**: Similar to L1 cache when data is cached
-    - **Bandwidth**: No need to worry?
+    - Latency: Similar to L1 cache when data is cached
+    - Bandwidth: No need to worry?
 
 On chip memory has low latency and high bandwidth, in order to achieve high computational performance, try to better utilize on chip memory and avoid frequent data exchange between global memory and the computational cores.
 
