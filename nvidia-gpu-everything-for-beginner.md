@@ -40,13 +40,13 @@ Please refer this [wiki](https://en.wikipedia.org/wiki/Single-precision_floating
 Here's an explanation of the various formats:
 
 1. **FP64 (Double Precision)**
-- **Bits**: 64 (52-bit mantissa, 11-bit exponent, 1-bit sign)
-- **Use Cases**:
+**Bits**: 64 (52-bit mantissa, 11-bit exponent, 1-bit sign)
+**Use Cases**:
     - Scientific computing requiring high precision
     - Climate modeling
     - Computational fluid dynamics
     - Financial modeling with high accuracy requirements
-- **Performance**: Slowest but highest precision
+**Performance**: Slowest but highest precision
 2. **FP32 (Single Precision)**
 - **Bits**: 32 (23-bit mantissa, 8-bit exponent, 1-bit sign)
 - **Use Cases**:
@@ -79,7 +79,7 @@ Here's an explanation of the various formats:
 6. **INT8 (8-bit Integer)**
 - **Bits**: 8 (0-bit mantissa, 7-bit exponent, 1-bit sign)
 - **Use Cases**:
-    -- AI inference
+    - AI inference
     - Image processing
     - Low-precision neural network acceleration
 - **Performance**: High performance and low memory usage, suitable for deployment on edge devices
