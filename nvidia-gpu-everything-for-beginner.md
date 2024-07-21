@@ -69,21 +69,21 @@ Here's an explanation of the various formats:
     - Computer vision
     - Image processing
 - **Performance**: Faster and more memory-efficient than FP32, with some accuracy trade-offs
-**5. BF16 (Brain Float 16)**
+5. **BF16 (Brain Float 16)**
 - **Bits**: 16 (7-bit mantissa, 8-bit exponent, 1-bit sign)
 - **Use Cases**:
     - AI model training, especially for **Large Language Models**
     - Offers better dynamic range than FP16
     - First introduced with the **Ampere** architecture
 - **Performance**: Good balance of speed and accuracy for many AI workloads
-**6. INT8 (8-bit Integer)**
+6. **INT8 (8-bit Integer)**
 - **Bits**: 8 (0-bit mantissa, 7-bit exponent, 1-bit sign)
 - **Use Cases**:
-    - AI inference
+- AI inference
     - Image processing
     - Low-precision neural network acceleration
 - **Performance**: High performance and low memory usage, suitable for deployment on edge devices
-**7. FP8 (8-bit Floating Point)**
+7. **FP8 (8-bit Floating Point)**
 - **Bits**: 8 (3-bit mantissa, 4-bit exponent, 1-bit sign)
 - **Use Cases**:
     - AI training and inference (emerging format)
