@@ -35,11 +35,11 @@ Different precision formats offer a trade-off between computational accuracy and
     - Represents the significant digits of the number
     - In normalized form, there's an implicit leading 1 before the binary point
 
-Please refer this wiki for how these parts convert number to binary format: https://en.wikipedia.org/wiki/Single-precision_floating-point_format#Exponent_encoding
+Please refer this [wiki](https://en.wikipedia.org/wiki/Single-precision_floating-point_format#Exponent_encoding) for how these parts convert number to binary format
 
 Here's an explanation of the various formats:
 
-**1. FP64 (Double Precision)**
+1. **FP64 (Double Precision)**
 - **Bits**: 64 (52-bit mantissa, 11-bit exponent, 1-bit sign)
 - **Use Cases**:
     - Scientific computing requiring high precision
@@ -47,7 +47,7 @@ Here's an explanation of the various formats:
     - Computational fluid dynamics
     - Financial modeling with high accuracy requirements
 - **Performance**: Slowest but highest precision
-**2. FP32 (Single Precision)**
+2. **FP32 (Single Precision)**
 - **Bits**: 32 (23-bit mantissa, 8-bit exponent, 1-bit sign)
 - **Use Cases**:
     - General-purpose computing
@@ -55,14 +55,14 @@ Here's an explanation of the various formats:
     - Computer graphics
     - Physics simulations
 - **Performance**: Balanced between precision and speed
-**3. TF32 (Tensor Float 32)**
+3. **TF32 (Tensor Float 32)**
 - **Bits**: 19 (10-bit mantissa, 8-bit exponent, 1-bit sign)
 - **Use Cases**:
     - AI model training (NVIDIA-specific format)
     - Offers a balance between FP32 accuracy and FP16 speed
     - First introduced with the **Ampere** architecture
 - **Performance**: Faster than FP32 with minimal accuracy loss for many AI tasks
-**4. FP16 (Half Precision)**
+4. **FP16 (Half Precision)**
 - **Bits**: 16(10-bit mantissa, 5-bit exponent, 1-bit sign)
 - **Use Cases**:
     - AI model training and inference
