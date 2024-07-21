@@ -79,7 +79,7 @@ Here's an explanation of the various formats:
 6. **INT8 (8-bit Integer)**
 - **Bits**: 8 (0-bit mantissa, 7-bit exponent, 1-bit sign)
 - **Use Cases**:
-- AI inference
+    -- AI inference
     - Image processing
     - Low-precision neural network acceleration
 - **Performance**: High performance and low memory usage, suitable for deployment on edge devices
