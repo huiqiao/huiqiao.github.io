@@ -1,3 +1,4 @@
+
 # Nvidia GPU Architectures (2014-2024)
 
 Here's an overview of Nvidia GPU architectures from the past 10 years, popular GPU cards for each architecture(Brown color for server version):
@@ -91,7 +92,7 @@ Here's an explanation of the various formats:
 
 Illustration(image from nvidia-h100-tensor-core-hopper-whitepaper.pdf):
 
-![precision format](https://github.com/huiqiao/huiqiao.github.io/blob/master/images/precision-format.jpg)
+![precision format](https://raw.githubusercontent.com/huiqiao/huiqiao.github.io/master/images/precision-format.jpg)
 
 Key Points:
 
@@ -109,7 +110,7 @@ Understanding these precision formats and their use cases is crucial for optimiz
 
 The fundamental computational units in Nvidia GPU is Streaming Multiprocessors(SM). GH100  full GPU has 144 SMs(image from nvidia-h100-tensor-core-hopper-whitepaper.pdf). 
 
-![H100-SM Architecture](https://github.com/huiqiao/huiqiao.github.io/blob/master/images/H100-SM.jpg)
+![H100-SM Architecture](https://raw.githubusercontent.com/huiqiao/huiqiao.github.io/master/images/H100-SM.jpg)
 
 Let’s talk about the major components of SM:
 
