@@ -44,10 +44,10 @@ Here's an explanation of the various formats:
 1. **FP64 (Double Precision)**
 - **Bits**: 64 (52-bit mantissa, 11-bit exponent, 1-bit sign)
 - **Use Cases**:
-    - Scientific computing requiring high precision
-    - Climate modeling
-    - Computational fluid dynamics
-    - Financial modeling with high accuracy requirements
+    -- Scientific computing requiring high precision
+    -- Climate modeling
+    -- Computational fluid dynamics
+    -- Financial modeling with high accuracy requirements
 **Performance**: Slowest but highest precision
 3. **FP32 (Single Precision)**
 - **Bits**: 32 (23-bit mantissa, 8-bit exponent, 1-bit sign)
