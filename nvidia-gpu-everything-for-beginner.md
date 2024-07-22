@@ -1,9 +1,10 @@
 ---
 layout: page
-title: Everything About Nvidia GPU For Beginner
+title: Nvidia GPU Summary For Beginner
 permalink: /nvidia-gpu-everything-for-beginner/
 ---
 
+Note: This article was written with assistance from Perplexity and Claude.ai
 ## Nvidia GPU Architectures (2014-2024)
 
 Here's an overview of Nvidia GPU architectures from the past 10 years, popular GPU cards for each architecture(Brown color for server version):
@@ -44,7 +45,7 @@ Please refer this [wiki](https://en.wikipedia.org/wiki/Single-precision_floating
 
 Here's an explanation of the various formats:
 
-1. FP64 (Double Precision)
+1. **FP64 (Double Precision)**
     - **Bits**: 64 (52-bit mantissa, 11-bit exponent, 1-bit sign)
     - **Use Cases**:
         - Scientific computing requiring high precision
