@@ -1,24 +1,24 @@
 
-# Nvidia GPU Architectures (2014-2024)
+## Nvidia GPU Architectures (2014-2024)
 
 Here's an overview of Nvidia GPU architectures from the past 10 years, popular GPU cards for each architecture(Brown color for server version):
 
 1. **Maxwell (2014-2015)**
-- Popular GPUs: GTX 980 Ti, Tesla K80
+    - Popular GPUs: GTX 980 Ti, Tesla K80
 2. **Pascal (2016-2017)**
-- Popular GPUs: GTX 1080 Ti, Tesla P100  
+    - Popular GPUs: GTX 1080 Ti, Tesla P100  
 3. **Volta (2017-2018)**
-- Popular GPUs: Titan V, Tesla V100
+    - Popular GPUs: Titan V, Tesla V100
 4. **Turing (2018-2019)**
-- Popular GPUs: RTX 2080 Ti, Tesla T4
+    - Popular GPUs: RTX 2080 Ti, Tesla T4
 5. **Ampere (2020-2021)**
-- Popular GPUs: RTX 3090, RTX 3080, RTX 3070, A100, A800(mainly for China), A40, A20
+    - Popular GPUs: RTX 3090, RTX 3080, RTX 3070, A100, A800(mainly for China), A40, A20
 6. **Ada Lovelace (2022-present)**
-- Popular GPUs: RTX 4090, RTX 4090D(**China version**), L20(mainly for China), L40
+    - Popular GPUs: RTX 4090, RTX 4090D(**China version**), L20(mainly for China), L40
 7. **Hopper (2022-present, focused on data centers)**
-- Popular GPUs: H100, H800, H20(mainly for China)
+    - Popular GPUs: H100, H800, H20(mainly for China)
 8. **Blackwell(2023 - present, focused on data centers)**
-- Popular GPUs: GB200
+    - Popular GPUs: GB200
 
 # Precision Formats Supported
 
@@ -40,14 +40,14 @@ Please refer this [wiki](https://en.wikipedia.org/wiki/Single-precision_floating
 Here's an explanation of the various formats:
 
 1. **FP64 (Double Precision)**
-- **Bits**: 64 (52-bit mantissa, 11-bit exponent, 1-bit sign)
-- **Use Cases**:
-    - Scientific computing requiring high precision
-    - Climate modeling
-    - Computational fluid dynamics
-    - Financial modeling with high accuracy requirements
-- **Performance**: Slowest but highest precision
-3. **FP32 (Single Precision)**
+    - **Bits**: 64 (52-bit mantissa, 11-bit exponent, 1-bit sign)
+    - **Use Cases**:
+        - Scientific computing requiring high precision
+        - Climate modeling
+        - Computational fluid dynamics
+        - Financial modeling with high accuracy requirements
+    - **Performance**: Slowest but highest precision
+2. **FP32 (Single Precision)**
 - **Bits**: 32 (23-bit mantissa, 8-bit exponent, 1-bit sign)
 - **Use Cases**:
     - General-purpose computing
