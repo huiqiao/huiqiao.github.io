@@ -4,7 +4,7 @@ title: Everything About Nvidia GPU For Beginner
 permalink: /nvidia-gpu-everything-for-beginner/
 ---
 
-# Nvidia GPU Architectures (2014-2024)
+## Nvidia GPU Architectures (2014-2024)
 
 Here's an overview of Nvidia GPU architectures from the past 10 years, popular GPU cards for each architecture(Brown color for server version):
 
@@ -25,7 +25,7 @@ Here's an overview of Nvidia GPU architectures from the past 10 years, popular G
 8. **Blackwell(2023 - present, focused on data centers)**
     - Popular GPUs: GB200
 
-# Precision Formats Supported
+## Precision Formats Supported
 
 Different precision formats offer a trade-off between computational accuracy and performance. They are represented in scientific notation in computers, consisting of three parts:
 
@@ -111,7 +111,7 @@ Key Points:
 
 Understanding these precision formats and their use cases is crucial for optimizing performance in various computational tasks, especially in the fields of AI and high-performance computing.
 
-# **Key GPU Components**
+## Key GPU Components
 
 The fundamental computational units in Nvidia GPU is Streaming Multiprocessors(SM). GH100  full GPU has 144 SMs(image from nvidia-h100-tensor-core-hopper-whitepaper.pdf). 
 
@@ -143,7 +143,7 @@ Let’s talk about the major components of SM:
     - Present in recent architectures (e.g., Turing, Ampere, Ada Lovelace)
     - Accelerate ray tracing operations for graphics workloads
 
-# Memory **Hierarchy**
+## Memory Hierarchy
 
 1. **Register File**:
     - Fastest on-chip memory(256 KB per SM for H100)
@@ -180,7 +180,7 @@ Let’s talk about the major components of SM:
 
 On chip memory has low latency and high bandwidth, in order to achieve high computational performance, try to better utilize on chip memory and avoid frequent data exchange between global memory and the computational cores.
 
-# Computing Blocks
+## Computing Blocks
 
 You probably heard warp, thread, block in previous paragraphs. Let me explain these concepts in detail.
 
@@ -320,7 +320,7 @@ int main() {
 
 If you need code explanation, please refer to [Claude.ai](http://Claude.ai) or [chatGPT](https://chatgpt.com/)
 
-# Finally, Maximize GPU Performance
+## Finally, Maximize GPU Performance
 
 To maximize GPU performance, it is essential to understand and optimize several key factors: GPU utilization, memory bandwidth, floating-point operations per second (FLOPS), and memory access latency. Here's a detailed breakdown of how to utilize GPU resources effectively and how these factors interrelate:
 
