@@ -5,8 +5,10 @@ Here's an overview of Nvidia GPU architectures from the past 10 years, popular G
 
 1. **Maxwell (2014-2015)**
     - Popular GPUs: GTX 980 Ti, Tesla K80
+
 2. **Pascal (2016-2017)**
     - Popular GPUs: GTX 1080 Ti, Tesla P100
+      
 3. **Volta (2017-2018)**
     - Popular GPUs: Titan V, Tesla V100
 4. **Turing (2018-2019)**
@@ -40,14 +42,14 @@ Please refer this [wiki](https://en.wikipedia.org/wiki/Single-precision_floating
 Here's an explanation of the various formats:
 
 1. **FP64 (Double Precision)**
-**Bits**: 64 (52-bit mantissa, 11-bit exponent, 1-bit sign)
-**Use Cases**:
+- **Bits**: 64 (52-bit mantissa, 11-bit exponent, 1-bit sign)
+- **Use Cases**:
     - Scientific computing requiring high precision
     - Climate modeling
     - Computational fluid dynamics
     - Financial modeling with high accuracy requirements
 **Performance**: Slowest but highest precision
-2. **FP32 (Single Precision)**
+3. **FP32 (Single Precision)**
 - **Bits**: 32 (23-bit mantissa, 8-bit exponent, 1-bit sign)
 - **Use Cases**:
     - General-purpose computing
