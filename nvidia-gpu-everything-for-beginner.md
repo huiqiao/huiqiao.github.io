@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Nvidia GPU Summary For Beginner
+title: Nvidia GPU For Beginners
 permalink: /nvidia-gpu-everything-for-beginner/
 ---
 
